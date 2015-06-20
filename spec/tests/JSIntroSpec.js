@@ -67,4 +67,30 @@ describe("JSIntro Test Suite", function(){
 			expect(str).toEqual("a");
 		});
 	});
+//});
+describe("JSIntro-ReverseArrayOfStrings", function(){
+
+		it("[abc,abcd,abcde,a] reversed is [cba,dcba,edcba,a]", function(){
+
+			var str = JSIntro.ReverseArrayOfStrings(["abc","abcd","abcde","a"]);
+			expect(str).toEqual(["cba","dcba","edcba","a"]);
+		});
+
+		it("[a,ab] reversed is [a,ba]", function(){
+
+			var str = JSIntro.ReverseArrayOfStrings(["a","ab"]);
+			expect(str).toEqual(["a","ba"]);
+		});
+
+		it("[a] reversed is [a]", function(){
+
+			var str = JSIntro.ReverseArrayOfStrings(["a"]);
+			expect(str).toEqual(["a"]);
+		});
+		it("[] reversed is []", function(){
+
+			var str = JSIntro.ReverseArrayOfStrings([]);
+			expect(str).toEqual([]);
+		});
+	});
 });
